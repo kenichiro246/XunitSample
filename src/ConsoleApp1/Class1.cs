@@ -22,5 +22,11 @@ namespace ConsoleApp1
         {
             return (x + y).ToString("0000000");
         }
+
+        public double zeroDivide()
+        {
+            var a = 0;
+            return 1 / a;
+        }
     }
 }
