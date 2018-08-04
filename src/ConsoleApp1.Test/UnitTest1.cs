@@ -50,5 +50,17 @@ namespace ConsoleApp1.Test
             var actual = obj.Invoke("addAndZeroFormat", 10, 3) as string;
             Assert.Equal("0000013", actual);
         }
+        [Fact]
+        public void TestMethod7()
+        {
+            var c1 = new Class1();
+            Assert.Throws<DivideByZeroException>(()=> { var a = c1.zeroDivide(); });
+        }
+        [Fact]
+        public void TestMethod8()
+        {
+            var c1 = new Class1();
+            Assert.Throws<DivideByZeroException>(() => { var a = c1.zeroDivide(); });
+        }
     }
 }
